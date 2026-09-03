@@ -25,6 +25,7 @@ const serviceSchema = new mongoose.Schema(
     metaDescription: { type: String, required: true },
     h1: { type: String, required: true },
     intro: { type: String, required: true },
+    imageUrl: { type: String, default: "" },
     sections: { type: [sectionSchema], default: [] },
     features: { type: [String], default: [] },
     faqs: { type: [faqSchema], default: [] },

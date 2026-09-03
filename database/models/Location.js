@@ -20,6 +20,11 @@ const locationSchema = new mongoose.Schema(
   {
     slug: { type: String, required: true, unique: true, lowercase: true, trim: true },
     area: { type: String, required: true },
+    region: {
+      type: String,
+      enum: ["ghaziabad", "india", "punjab", "country"],
+      default: "ghaziabad",
+    },
     pincode: { type: String, default: "" },
     order: { type: Number, default: 0 },
     seoTitle: { type: String, required: true },

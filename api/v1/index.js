@@ -22,6 +22,7 @@ const ProcessStep = require("../../database/models/ProcessStep");
 const TechStackItem = require("../../database/models/TechStackItem");
 const Faq = require("../../database/models/Faq");
 const FeaturedSolution = require("../../database/models/FeaturedSolution");
+const PageContent = require("../../database/models/PageContent");
 
 const router = express.Router();
 
@@ -65,6 +66,7 @@ const simpleResources = [
   ["tech-stack", TechStackItem],
   ["faqs", Faq],
   ["featured-solutions", FeaturedSolution],
+  ["page-content", PageContent],
 ];
 
 for (const [path, Model] of simpleResources) {
